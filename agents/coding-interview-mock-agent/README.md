@@ -330,8 +330,11 @@ pytest tests/ -v
 
 ## Future Improvements
 
+- [ ] **Simulated Video Call (Google Meet Experience)**: Integrate WebRTC-based video calling with an interactive AI interviewer avatar, simulating authentic face-to-face Google Meet interviews with non-verbal feedback and presence indicators.
+- [ ] **Real-Time Voice-to-Text (Speech-to-Text / STT)**: Support hands-free "think aloud" candidate dialogue via Web Speech API and Whisper/Gemini audio processing, converting spoken candidate explanations into code comments and dialogue in real time.
+- [ ] **Natural Voice Messaging & TTS Audio**: Add neural Text-to-Speech (TTS) audio playback so the Google interviewer speaks questions, interruptions, and hints aloud with realistic cadence, alongside support for asynchronous candidate voice notes.
 - [ ] **Docker Sandbox Migration**: Migrate local subprocess execution to rootless Docker / gVisor containers with `--network none` and `--memory 128m`.
-- [ ] **Gemini Multimodal Live API (Voice)**: Add real-time speech-to-speech audio streaming so candidates can verbally interview without typing.
+- [ ] **Gemini Multimodal Live API (Bidirectional Audio)**: Direct streaming audio integration using Gemini Multimodal Live API over WebSockets for zero-latency conversational back-and-forth.
 - [ ] **AST Static Analysis**: Parse Python and Java Abstract Syntax Trees to detect recursion depth, memory leaks, and anti-patterns before executing code.
 - [ ] **Collaborative Whiteboard**: Add an interactive canvas for diagramming tree structures, graph traversals, and system architectures.
 - [ ] **Level Customization**: Allow candidates to target specific engineering tiers (L3 Junior, L4 Mid-level, L5 Senior, L6 Staff) with dynamically tuned rubric strictness.
