@@ -13,6 +13,7 @@ Supports Google GenAI API (Gemini) with automatic JSON extraction and
 intelligent offline heuristic fallback for testing and development.
 """
 
+from __future__ import annotations
 import os
 import re
 import json

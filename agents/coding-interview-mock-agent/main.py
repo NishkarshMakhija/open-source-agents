@@ -6,6 +6,7 @@ Exposes:
 - Interactive CLI Terminal Mode for running mock interviews directly in the console
 """
 
+from __future__ import annotations
 import os
 import sys
 import argparse

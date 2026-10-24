@@ -2,6 +2,7 @@
 Unit tests for Evaluator, Code Runner, and Report Services.
 """
 
+from __future__ import annotations
 import pytest
 from models.schemas import (
     DifficultyLevel,

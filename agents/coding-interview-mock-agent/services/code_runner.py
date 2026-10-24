@@ -18,13 +18,14 @@ with the following safeguards:
 =============================================================================
 """
 
+from __future__ import annotations
 import os
 import sys
 import shutil
 import tempfile
 import time
 import subprocess
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, Union
 from models.schemas import ProgrammingLanguage, RunCodeResponse
 
 
@@ -44,7 +45,7 @@ class CodeExecutionService:
     def execute(
         self,
         code: str,
-        language: ProgrammingLanguage | str = ProgrammingLanguage.PYTHON,
+        language: Union[ProgrammingLanguage, str] = ProgrammingLanguage.PYTHON,
         stdin_input: Optional[str] = ""
     ) -> RunCodeResponse:
         """

@@ -3,6 +3,7 @@ Unit tests for Question Bank and Loader utility.
 Validates question counts, schema properties, topic coverage, and random selection.
 """
 
+from __future__ import annotations
 import pytest
 from models.schemas import Question, DifficultyLevel
 from utils.loader import (

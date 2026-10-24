@@ -3,11 +3,12 @@ Question and Prompt Loader Utility.
 Provides resilient file loading, schema validation, and question selection across difficulties and topics.
 """
 
+from __future__ import annotations
 import json
 import os
 import random
 from pathlib import Path
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Union
 from models.schemas import Question, DifficultyLevel
 
 
@@ -17,13 +18,13 @@ QUESTION_BANK_DIR = BASE_DIR / "question_bank"
 PROMPTS_DIR = BASE_DIR / "prompts"
 
 
-def get_question_file_path(difficulty: str | DifficultyLevel) -> Path:
+def get_question_file_path(difficulty: Union[str, DifficultyLevel]) -> Path:
     """Return the absolute path for a difficulty question file."""
     diff_val = difficulty.value if isinstance(difficulty, DifficultyLevel) else str(difficulty).lower()
     return QUESTION_BANK_DIR / f"{diff_val}.json"
 
 
-def load_questions_by_difficulty(difficulty: str | DifficultyLevel) -> List[Question]:
+def load_questions_by_difficulty(difficulty: Union[str, DifficultyLevel]) -> List[Question]:
     """
     Load and parse all questions for a specific difficulty level.
     Returns validated Question Pydantic instances.
@@ -71,7 +72,7 @@ def get_question_by_id(question_id: str) -> Optional[Question]:
 
 
 def get_random_question(
-    difficulty: str | DifficultyLevel = DifficultyLevel.MEDIUM,
+    difficulty: Union[str, DifficultyLevel] = DifficultyLevel.MEDIUM,
     topic: Optional[str] = None
 ) -> Question:
     """

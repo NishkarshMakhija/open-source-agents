@@ -5,6 +5,7 @@ Synthesizes InterviewSession and EvaluationResult into a comprehensive
 Google Software Engineering Hiring Committee Report.
 """
 
+from __future__ import annotations
 from typing import List, Dict, Any
 from datetime import datetime
 from models.schemas import (
