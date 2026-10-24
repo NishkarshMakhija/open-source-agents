@@ -342,19 +342,3 @@ pytest tests/ -v
 
 *This project is contributed under the repository's open-source license.*
 
----
-
-## Future Improvements
-
-- [ ] **Docker Sandbox Migration**: Migrate local subprocess execution to rootless Docker / gVisor containers with `--network none` and `--memory 128m`.
-- [ ] **Gemini Multimodal Live API (Voice)**: Add real-time speech-to-speech audio streaming so candidates can verbally interview without typing.
-- [ ] **AST Static Analysis**: Parse Python and Java Abstract Syntax Trees to detect recursion depth, memory leaks, and anti-patterns before executing code.
-- [ ] **Collaborative Whiteboard**: Add an interactive canvas for diagramming tree structures, graph traversals, and system architectures.
-- [ ] **Level Customization**: Allow candidates to target specific engineering tiers (L3 Junior, L4 Mid-level, L5 Senior, L6 Staff) with dynamically tuned rubric strictness.
-
----
-
-## License
-
-*This project is contributed under the repository's open-source license.*
-
